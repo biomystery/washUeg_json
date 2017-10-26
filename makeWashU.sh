@@ -1,7 +1,7 @@
 #!/bin/bash
-
-samples=(`grep -o "[a-zA-Z0-9_]*.bw" output.html| uniq`)
 base_url="http://enhancer.sdsc.edu/sochee/ENCODE/ipstar/"
+samples=(`curl -s $base_url| grep -o "[a-zA-Z0-9_]*.bw" | uniq`)
+
 out_json="tracks.json"
 touch out_json
 echo "[" >$out_json
