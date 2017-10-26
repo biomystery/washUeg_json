@@ -1,0 +1,1 @@
+{ "type": "bigwig", "name": "$name", "url": "$url", "mode": 1,  "qtc" : { "height": 20, "summeth":2, "smooth":3, "pr":255,"pg":0,"pb":0 ,"thtype":1, "thmin":0, "thmax":25 } },{ "type":"native_track", "list":[ { "name":"gencodeV23", "mode":"full", } ] },
