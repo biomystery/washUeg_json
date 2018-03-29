@@ -21,17 +21,20 @@ for f in ${samples[@]}
 do
     s=${f%.*}
     l=$source_url$f
-    sed -e "s@\$url@$l@g;s@\$name@$s@g" $(which base.json) |tee -a $out_json
+    sed -e "s@\$url@$l@g;s@\$name@$s@g" $(which base.json) >> $out_json
 done
 
 
 # adding genome 
 ref_genome="refGene"
-sed -e "s@\$genome@$ref_genome@g" $(which base_genome.json) |tee -a $out_json
+sed -e "s@\$genome@$ref_genome@g" $(which base_genome.json) >> $out_json
 printf "]" >> $out_json
 
 # finished
-echo "traks.json generated"
+echo "job finished" 
+echo "Your tracks can be seen: http://epigenomegateway.wustl.edu/browser/?genome=${genome}&tknamewidth=275&datahub=${source_url}/tracks.json"
+
+
 
 #http://epigenomegateway.wustl.edu/browser/?genome=hg19&tknamewidth=275&datahub=http://epigenomics.sdsc.edu:8084/tracks.json
 
