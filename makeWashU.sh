@@ -34,8 +34,3 @@ printf "]" >> $out_json
 echo "job finished" 
 echo "Your tracks can be seen: http://epigenomegateway.wustl.edu/browser/?genome=${genome}&tknamewidth=275&datahub=${source_url}/tracks.json"
 
-
-
-#http://epigenomegateway.wustl.edu/browser/?genome=hg19&tknamewidth=275&datahub=http://epigenomics.sdsc.edu:8084/tracks.json
-
-
