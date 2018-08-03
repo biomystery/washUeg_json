@@ -12,7 +12,7 @@ bws=$3
 samples=($(cat $bws))
 
 
-out_json="tracks.json"
+out_json=$4#"tracks.json"
 touch $out_json
 printf "[" >$out_json
 
@@ -32,5 +32,5 @@ printf "]" >> $out_json
 
 # finished
 echo "job finished" 
-echo "Your tracks can be seen: http://epigenomegateway.wustl.edu/browser/?genome=${genome}&tknamewidth=275&datahub=${source_url}/tracks.json"
+echo "Your tracks can be seen: http://epigenomegateway.wustl.edu/browser/?genome=${genome}&tknamewidth=275&datahub=${source_url}/${out_json}"
 
